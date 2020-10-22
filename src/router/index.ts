@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
-import Home from '../views/Home.vue';
+import Painel from '@/views/Painel.vue';
 
 function lazyLoad(view: string) {
   return () => import(`@/views/${view}.vue`);
@@ -11,13 +11,13 @@ Vue.use(VueRouter);
 const routes: Array<RouteConfig> = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
+    name: 'painel',
+    component: Painel,
   },
   {
-    path: '/about',
-    name: 'About',
-    component: lazyLoad('About'),
+    path: '/produtos',
+    name: 'produtos',
+    component: lazyLoad('Produtos'),
   },
 ];
 

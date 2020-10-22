@@ -8,6 +8,7 @@ export default new Vuetify({
     themes: {
       light: {
         primary: colors.purple.darken3,
+        backgound: colors.blue.accent4,
       },
     },
   },

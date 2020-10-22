@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <v-app-bar color="deep-purple" dark>
+    <v-app-bar color="primary" dark>
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
       <v-toolbar-title>Title</v-toolbar-title>
@@ -20,12 +20,17 @@
           v-model="group"
           active-class="white--text text--accent-4"
         >
-          <v-list-item v-for="menu in menus" :key="menu.id">
+          <v-list-item
+            v-for="menu in menus"
+            :key="menu.id"
+            router
+            :to="{ name: menu.route }"
+          >
             <v-list-item-icon>
-              <v-icon class="white--text">{{ menu.icon }}</v-icon>
+              <v-icon>{{ menu.icon }}</v-icon>
             </v-list-item-icon>
             <v-list-item-title class="white--text">{{
-              menu.titulo
+              menu.text
             }}</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
@@ -42,9 +47,8 @@ export default class NavBar extends Vue {
   drawer = false;
   group = null;
   menus = [
-    { id: 1, icon: "mdi-view-dashboard", titulo: "Painel", route: "/" },
-    { id: 2, icon: "mdi-account", titulo: "Produtos", route: "/projects" },
-    { id: 3, icon: "mdi-folder", titulo: "Clientes", route: "/team" },
+    { id: 1, icon: "mdi-view-dashboard", text: "Painel", route: "painel" },
+    { id: 2, icon: "mdi-account", text: "Produtos", route: "produtos" },
   ];
 }
 </script>
