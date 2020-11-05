@@ -35,7 +35,6 @@ export default class Produtos extends Vue {
   async getPedidos() {
     const response = await api.get("produto");
     this.produtos = response.data;
-    console.log(this.produtos);
   }
 
   created() {
