@@ -19,6 +19,11 @@ const routes: Array<RouteConfig> = [
     name: 'produtos',
     component: lazyLoad('Produtos'),
   },
+  {
+    path: '/pedidos',
+    name: 'pedidos',
+    component: lazyLoad('Pedidos'),
+  },
 ];
 
 const router = new VueRouter({

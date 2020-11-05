@@ -49,6 +49,7 @@ export default class NavBar extends Vue {
   menus = [
     { id: 1, icon: "mdi-view-dashboard", text: "Painel", route: "painel" },
     { id: 2, icon: "mdi-account", text: "Produtos", route: "produtos" },
+    { id: 3, icon: "mdi-account", text: "Pedidos", route: "pedidos" },
   ];
 }
 </script>
