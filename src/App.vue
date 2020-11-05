@@ -3,7 +3,7 @@
     <Navbar />
     <v-main class="ml-2 mr-2">
       <transition mode="out-in">
-        <router-view></router-view>
+        <router-view />
       </transition>
     </v-main>
   </v-app>

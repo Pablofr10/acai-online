@@ -1,6 +1,6 @@
 <template>
   <div class="mt-5">
-    <div colas>
+    <div v-if="produtos.length">
       <v-container class="grey lighten-5 mb-6">
         <v-row align="start">
           <v-col v-for="produto in produtos" :key="produto.id">
@@ -9,6 +9,9 @@
         </v-row>
       </v-container>
     </div>
+    <div v-else>
+      <Loading />
+    </div>
   </div>
 </template>
 
@@ -16,12 +19,14 @@
 import { Component, Vue } from "vue-property-decorator";
 import { api } from "@/services/services";
 import { Produto } from "@/models/Produto";
+import Loading from "@/components/Loading.vue";
 
 import CardProduto from "@/components/CardProduto.vue";
 
 @Component({
   components: {
     CardProduto,
+    Loading,
   },
 })
 export default class Produtos extends Vue {
@@ -30,7 +35,6 @@ export default class Produtos extends Vue {
   async getPedidos() {
     const response = await api.get("produto");
     this.produtos = response.data;
-    console.log(this.produtos);
   }
 
   created() {
