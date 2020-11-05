@@ -62,7 +62,7 @@
             <v-col cols="12" sm="12" md="12">
               <v-text-field
                 label="Nome do Produto *"
-                readonly="visualizar"
+                :readonly="visualizar"
                 v-model="produto.nome"
                 required
               ></v-text-field>
@@ -71,7 +71,7 @@
               <v-text-field
                 label="Descrição*"
                 required
-                readonly="visualizar"
+                :readonly="visualizar"
                 v-model="produto.descricao"
               ></v-text-field>
             </v-col>
@@ -79,12 +79,12 @@
               <v-radio-group row v-model="produto.isDisponivel">
                 <v-radio
                   label="Disponível"
-                  readonly="visualizar"
+                  :readonly="visualizar"
                   :value="true"
                 ></v-radio>
                 <v-radio
                   label="Indisponível"
-                  readonly="visualizar"
+                  :readonly="visualizar"
                   :value="false"
                 ></v-radio>
               </v-radio-group>
@@ -93,7 +93,7 @@
               <v-text-field
                 label="Descrição*"
                 required
-                readonly="visualizar"
+                :readonly="visualizar"
                 v-model="produto.preco"
                 v-money="money"
               ></v-text-field>
@@ -102,7 +102,7 @@
               <v-autocomplete
                 :items="categorias"
                 label="Categorias"
-                readonly="visualizar"
+                :readonly="visualizar"
                 multiple
               ></v-autocomplete>
             </v-col>
