@@ -57,7 +57,6 @@ export default class TabelaPedidos extends Vue {
   headers = [
     {
       text: "Nome",
-      align: "start",
       filterable: false,
       value: "nome",
     },
