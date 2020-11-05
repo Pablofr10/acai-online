@@ -16,7 +16,7 @@
           <v-btn color="blue darken-1" text @click="fecharModal">
             Fechar
           </v-btn>
-          <v-btn color="blue darken-1" text @click="dialog = false">
+          <v-btn color="blue darken-1" text @click="fecharModal">
             Salvar
           </v-btn>
         </v-card-actions>

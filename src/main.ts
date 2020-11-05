@@ -4,16 +4,16 @@ import router from './router';
 import store from './store';
 import vuetify from './plugins/vuetify';
 import money from 'v-money';
-import filters from '@/Utils/filters';
+import Vue2Filters from 'vue2-filters';
 
 Vue.config.productionTip = false;
 
 Vue.use(money, { precision: 4 });
+Vue.use(Vue2Filters);
 
 new Vue({
   router,
   store,
-  filters,
   vuetify,
   render: (h) => h(App),
 }).$mount('#app');
