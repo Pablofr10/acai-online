@@ -9,7 +9,7 @@ export const api = {
     return axiosService.get(endpoint);
   },
   post(endpoint: string, body: any) {
-    return axiosService.post(endpoint);
+    return axiosService.post(endpoint, body);
   },
   delete(endpoint: string) {
     return axiosService.delete(endpoint);
