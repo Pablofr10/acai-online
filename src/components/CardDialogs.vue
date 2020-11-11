@@ -1,11 +1,6 @@
 <template>
   <v-row justify="center">
-    <v-dialog
-      v-model="dialog"
-      :abrirModal="dialog"
-      persistent
-      max-width="600px"
-    >
+    <v-dialog v-model="dialog" :abrirModal="dialog" persistent max-width="600px">
       <v-card>
         <v-card-title>
           <span class="headline">{{ title }}</span>
